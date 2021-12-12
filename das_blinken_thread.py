@@ -8,7 +8,8 @@ from time import sleep
 from machine import Pin
 
 # Pin 2 on ESP32, Pin 25 on Pico
-led = Pin(2, Pin.OUT)
+led = Pin(25, Pin.OUT)
+# led = Pin(2, Pin.OUT)
 
 def blink_led():
     """ Blink the built in LED on and then off """
