@@ -18,24 +18,24 @@ def test_thread():
         time.sleep(1)
         led.value(1)
         time.sleep(1)
-        mutex.aquire()
+        mutex.acquire()
         value += 1
         mutex.release()
         
 def second_thread(name):
     global value
     while True:
-        msg = "Thread " + name + str(value)
+        msg = "Thread no: " + name + ", value is: " + str(value)
         print(msg)
         time.sleep(1)
-        mutex.aquire()
+        mutex.acquire()
         value += 1
         mutex.release()
 
 _thread.start_new_thread(test_thread, ())
-while True:
-    message = "Core Code " + str(value)
-    print(message)
-    time.sleep(3)
 _thread.start_new_thread(second_thread,["second"])
 _thread.start_new_thread(second_thread,["third"])
+while True:
+    message = "Core Code, value is: " + str(value)
+    print(message)
+    time.sleep(3)

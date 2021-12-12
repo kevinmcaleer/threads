@@ -1,3 +1,7 @@
+# Files in this repository
+- `das_blinken_thread.py` - flashed the built in LED whilst doing something else
+- `test_thread.py` - 
+
 # Micropython thread tutorial
 
 Micropython programs are usually just a single flow of code, and therefore don't make use of the second core available on the Raspberry Pi Pico or Espressif ESP32 boards.
